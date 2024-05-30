@@ -1,0 +1,114 @@
+/* ------------------ CONFIGURAÇÃO GERAIS  ------------------*/
+* {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #212121;
+}
+
+/* ------------------ CABECALHO ------------------*/
+
+.navbar {
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.username {
+    font-size: 18px;
+    margin-left: auto;
+    padding-right: 13px;
+    color: #007bff;
+    text-transform: uppercase;
+}
+
+.sair {
+    font-size: 18px;
+    color: aliceblue;
+}
+
+
+/* ------------------ FOOTER ------------------*/
+.footer {
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ------------------ TABELA ------------------ */
+.container {
+    margin: 11px auto;
+    border-radius: 5px;
+    border: 1px solid #7d7d7d;
+    background-color: #212121;
+    color: white;
+    width: 92%;
+}
+
+.table-container {
+    max-height: 495px;
+    overflow: auto;
+}
+
+.container h2 {
+    color: white;
+    padding: 8px;
+    margin: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px; /* Aumentado o padding para melhorar a legibilidade */
+    text-align: left;
+}
+
+th {
+    background-color: #171717;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #171717;
+}
+
+tbody tr:hover {
+    background-color: #474747;
+}
+
+.editar {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.excluir {
+    text-decoration: none;
+    color: brown;
+}

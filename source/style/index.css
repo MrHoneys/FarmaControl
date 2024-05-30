@@ -1,19 +1,22 @@
 /* ------------------ CONFIGURAÇÃO GERAL ------------------ */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0e0e0e; /* mantendo o fundo original */
+    background: #0e0e0e;
+    overflow: hidden;
+
 }
 
 /* ------------------ FUNDO DO BACKGROUND BOLHAS ------------------ */
 .bubbles {
     position: absolute;
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+
 }
 
 .bubble {
@@ -29,9 +32,11 @@ body, html {
         transform: translateY(0) scale(0.5);
         opacity: 1;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(-100vh) scale(1);
         opacity: 0;
@@ -51,10 +56,11 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 23%;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    position: relative;
 }
 
 .title {
@@ -63,7 +69,8 @@ body, html {
 }
 
 .username {
-    color: #007bff; 
+    color: #007bff;
+    text-transform: uppercase;
 }
 
 .greeting {
@@ -74,17 +81,17 @@ body, html {
 .actions {
     display: flex;
     justify-content: center;
-    gap: 15px; 
+    gap: 15px;
 }
 
 .action-button {
     display: inline-block;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     background-color: black;
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 16px; 
+    font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
