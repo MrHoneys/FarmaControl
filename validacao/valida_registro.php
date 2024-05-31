@@ -1,8 +1,6 @@
 <?php
-include_once('../conexao/conexao.php');
 
-// Inicializa a variável de mensagem
-$msg = "";
+include_once('../conexao/conexao.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $produto = $_POST['produto'];
@@ -20,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
         $conn->close();
         
-        // Define a mensagem de sucesso
         echo '<script> window.alert("Item Cadastrado com Sucesso!"); setTimeout(function(){ window.location.href = "../pages/registar.php"; }); </script>';
 
     } else {

@@ -1,29 +1,29 @@
 <?php
-    include_once('../conexao/conexao.php');
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
 
-        $sql = "INSERT INTO users (usuario, senha) VALUES (?, ?)";
+include_once('../conexao/conexao.php');
 
-        // Preparar a instrução SQL
-        $stmt = $conn->prepare($sql);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-        // "ss" indica que os parâmetros são strings
-        $stmt->bind_param("ss", $username, $password);
+    $sql = "INSERT INTO users (usuario, senha) VALUES (?, ?)";
 
-        // Executar a instrução SQL
-        $stmt->execute();
+    // Preparar a instrução SQL
+    $stmt = $conn->prepare($sql);
 
-        // Fechar a declaração
-        $stmt->close();
-        
-        // Fechar a conexão com o banco de dados (se necessário)
-        $conn->close();
+    // "ss" indica que os parâmetros são strings
+    $stmt->bind_param("ss", $username, $password);
 
-        // Redirecionar para outra página após o cadastro
-        header("Location: ../pages/login.php");
-        exit(); 
-    }
-?>
+    // Executar a instrução SQL
+    $stmt->execute();
+
+    // Fechar a declaração
+    $stmt->close();
+
+    // Fechar a conexão com o banco de dados (se necessário)
+    $conn->close();
+
+    // Redirecionar para outra página após o cadastro
+    header("Location: ../pages/login.php");
+    exit();
+}

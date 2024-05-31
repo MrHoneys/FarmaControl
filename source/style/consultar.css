@@ -112,3 +112,14 @@ tbody tr:hover {
     text-decoration: none;
     color: brown;
 }
+
+#searchInput {
+    width: 250px;
+    padding: 8px 12px;
+    margin-left: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}

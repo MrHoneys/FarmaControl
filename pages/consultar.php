@@ -30,8 +30,12 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true) {
     <!-------------------------- PUXAR TABELA -------------------------->
     <div class="container">
         <h2>Tabela de Produtos</h2>
-        <div class="table-container"> <!-- Nova div para envolver a tabela -->
-            <table>
+
+        <!-- Campo de Pesquisa -->
+        <input type="text" id="searchInput" placeholder="Pesquisar...">
+
+        <div class="table-container">
+            <table id="productTable">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -53,7 +57,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] !== true) {
         <p>&copy; <?php echo date("Y"); ?> FarmaControl. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="../source/javascript/consultar.php"></script>
+    <script src="../source/javascript/consultar.js"></script>
 </body>
 
 </html>
