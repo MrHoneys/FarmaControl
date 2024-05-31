@@ -28,6 +28,41 @@ FarmaControl é o site que estou desenvolvendo como parte do meu projeto univers
 
 8. **Fundo Animado**: O site conta com um fundo animado para tornar a experiência do usuário mais agradável e interativa.
 
+# Configurando o Ambiente
+
+1. Clone o repositório do FarmaControl do GitHub: 
+
+```bash
+git clone https://github.com/MrHoneys/FarmaControl.git
+
+```
+2. Coloque dentro do diretório `htdocs` da pasta XAMPP.
+3. Configure o servidor web e o banco de dados de acordo com as especificações do projeto.
+```sql
+CREATE DATABASE FarmaControl;
+
+USE FarmaControl;
+
+-- Criação da tabela de usuários
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    usuario CHAR(10) NOT NULL,
+    senha CHAR(10) NOT NULL
+);
+
+-- Criação da tabela de produtos
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    quantidade INT,
+    validade DATE
+);
+```
+ ## Autores
+
+- [@Julio Cezar](https://www.linkedin.com/in/julio-cezar-de-paula-baldo-51774321a/)   
+
 # Imagems do Projeto
 ![01](https://github.com/MrHoneys/FarmaControl/assets/143344101/7e675dbc-c41d-4443-a1d1-121dea5b1453)
 ![02](https://github.com/MrHoneys/FarmaControl/assets/143344101/bc76c262-77d4-4e71-aaf5-8f6c8ce42ce4)
